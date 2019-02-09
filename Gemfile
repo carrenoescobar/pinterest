@@ -64,6 +64,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #Devise para el manejo de usuarios
 gem 'devise'
 
+# Gema para likes
+gem 'acts_as_votable', '~> 0.12.0'
+
 group :development do
   gem 'sqlite3', '~> 1.3.6'
 end 
