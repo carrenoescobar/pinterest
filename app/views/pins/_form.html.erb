@@ -11,21 +11,28 @@
     </div>
   <% end %>
 
-<div class="form-group">
+  <div class="form-group">
   <div class="field">
-    <%= f.label :photo %><br>
-    <%= f.text_field :photo, :class => 'form-control' %>
+    <%= f.label :name, "Nombre que le quieras poner a la imagen" %><br>
+    <%= f.text_field :name, :class => 'form-control', :placeholder => "Nombre del Pin" %>
   </div>
 </div>
 
 <div class="form-group">
   <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description, :class => 'form-control' %>
+    <%= f.label :photo, "Link de la imagen a la que quieres poner un 'Pin'" %><br>
+    <%= f.text_field :photo, :class => 'form-control', :placeholder => "URL de la foto"  %>
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="field">
+    <%= f.label :description, "Describe tu imagen" %><br>
+    <%= f.text_area :description, :placeholder => "Ingresa una descripción de tu imagen.", :class => 'form-control', :rows => "10", :columns => "30" %>
   </div>
 </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Crear tu Pin", :class => "btn" %>
   </div>
 <% end %>
