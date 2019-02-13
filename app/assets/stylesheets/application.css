@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+ .img-custom{
+    height: 50px;
+  }
+  .img-circle{
+    border-radius: 50%;
+  }
