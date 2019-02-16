@@ -12,6 +12,11 @@ class PinsController < ApplicationController
     @pins = current_user.pins
   end
 
+def like
+  pin = Pin.find(params[:id])
+  Like.create(pin: pin, user: current_user)
+end
+
   # GET /pins
   # GET /pins.json
   def index

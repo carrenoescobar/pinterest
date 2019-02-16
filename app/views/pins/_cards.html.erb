@@ -3,8 +3,10 @@
    <img src="<%= pin.photo %>" class="card-img-top" alt="...">
    <div class="card-body">
      <h5 class="card-title"><%= pin.name %></h5>
-     <p class="card-text">Descripcion de la foto.</p>
-     <a href="#" class="btn btn-primary">Go somewhere</a>
+     <p class="card-text"><%= pin.description %></p>
+     <a href="/pins/<%= pin.id %>/like" data-method="POST" class="btn btn-primary">Me gusta</a>
+     <p class="card-text"><%= pin.likes.count %></p>
+
    </div>
  </div>
 </div>

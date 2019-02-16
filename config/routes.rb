@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   get 'mypins' => 'pins#mypins'
   get 'pinsof/:user_id' => 'pins#pinsof', :as => "pinsof"
 
+  post 'pins/:id/like', as: 'pins_like', to: 'pins#like'
+
 end
