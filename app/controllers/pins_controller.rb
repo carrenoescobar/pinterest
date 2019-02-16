@@ -1,5 +1,5 @@
 class PinsController < ApplicationController
-  before_action :set_pin, only: [:show, :edit, :update, :destroy]
+  before_action :set_pin, only: [:like, :show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
 
   def pinsof
@@ -13,8 +13,8 @@ class PinsController < ApplicationController
   end
 
 def like
-  pin = Pin.find(params[:id])
-  Like.create(pin: pin, user: current_user)
+  Like.create(pin: @pin, user: current_user)
+  redirect_to welcome_index_path
 end
 
   # GET /pins
@@ -82,7 +82,7 @@ end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_pin
-      @pin = Pin.find(params[:id])
+        @pin = Pin.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
