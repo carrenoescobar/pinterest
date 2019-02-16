@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Listing pins</h1>
+  <h1>Mis pins</h1>
 
   <% @pins.each do |pin| %>
 
@@ -23,15 +23,3 @@
     <%= link_to 'New Pin', new_pin_path %>
   <% end %>
 </div>
-
-
-<script type="text/javascript">
-$(window).load(function(){
-var $container = $('container'):
-$container.mansonry({
-  // options
-  itemSelector: '.item',
-  columnWidth: 200
-});
-})
-</script>

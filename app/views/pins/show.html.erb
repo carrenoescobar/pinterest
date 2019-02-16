@@ -10,5 +10,6 @@
   <%= @pin.description %>
 </p>
 
-<%= link_to 'Edit', edit_pin_path(@pin) %> |
+<%= link_to 'Edit', edit_pin_path(@pin) %>
 <%= link_to 'Back', pins_path %>
+<%= link_to "Más Pins del mismo usuario", pinsof_path(@pin.user.id) %>
